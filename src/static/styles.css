@@ -75,33 +75,91 @@ section h3 {
 }
 
 .participants-section {
-  margin-top: 14px;
-  padding: 12px 14px;
-  border: 1px solid #c5d2f5;
-  border-radius: 6px;
-  background-color: #eef3fc;
+  margin-top: 16px;
+  padding: 14px 16px;
+  border: 1px solid #d5def5;
+  border-left: 4px solid #3949ab;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f4f6fd, #eef3fc);
 }
 
 .participants-section h5 {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: #3949ab;
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
 .participants-section ul {
-  margin-left: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #333;
 }
 
-.participants-section li {
-  margin-bottom: 4px;
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 5px;
+  padding: 4px 0;
+  line-height: 1.5;
+  border-bottom: 1px solid #dce4f7;
+}
+
+.participant-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.participant-item span {
+  min-width: 0;
   overflow-wrap: anywhere;
 }
 
-.participants-section li:last-child {
-  margin-bottom: 0;
+.participant-remove {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: #a12a35;
+}
+
+.participant-remove:hover:not(:disabled) {
+  border-color: #f1c6ca;
+  background-color: #fff0f1;
+  color: #8b1d28;
+}
+
+.participant-remove:focus-visible {
+  outline: 2px solid #3949ab;
+  outline-offset: 2px;
+}
+
+.participant-remove:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.participant-remove svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .participants-empty {
+  margin-bottom: 0;
   color: #666;
   font-style: italic;
 }
